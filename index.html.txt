@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Camera Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Better font */
+            background-color: #f0f0f0; /* Light grey background */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        #title {
+            font-size: 36px; /* Font size for the title */
+            color: #333; /* Dark grey color for better contrast */
+            margin-bottom: 20px; /* Space below the title */
+        }
+        #container {
+            text-align: center;
+            background-color: #fff; /* White background for the content */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for a subtle 3D effect */
+            padding: 20px;
+            width: 100%;
+            max-width: 700px; /* Limit the width of the content container */
+        }
+        #video {
+            width: 100%;
+            max-width: 600px; /* Limit the width of the video */
+            border-radius: 8px;
+            filter: sepia(1) saturate(5) hue-rotate(-50deg) brightness(1.5); /* Apply red tint with increased brightness */
+        }
+        #capture {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            cursor: pointer;
+        }
+        #capture:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        #info-link {
+            display: block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        #info-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">RE-VIEWING THE GAZE</div>
+    <div id="container">
+        <video id="video" autoplay></video>
+        <button id="capture">Capture Photo</button>
+        <a href="https://josflint.com" id="info-link" target="_blank">Visit Jos Flint's Website</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
