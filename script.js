@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     navigator.mediaDevices.getUserMedia({
         video: {
             facingMode: { ideal: 'environment' }, // Prefer rear camera
-            width: { ideal: 1920 },
-            height: { ideal: 1080 },
+            width: { ideal: 3840 },
+            height: { ideal: 2160 },
             focusMode: 'auto' // Request autofocus
         }
     })
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         offScreenCtx.drawImage(video, 0, 0, offScreenCanvas.width, offScreenCanvas.height);
 
         // Apply brightness and contrast to the canvas
-        offScreenCtx.filter = 'sepia(1) saturate(50) hue-rotate(-10deg) brightness(0.9) contrast(1.5)'; // Adjusted filter values
+        offScreenCtx.filter = 'sepia(1) saturate(50) hue-rotate(-10deg) brightness(1) contrast(2)'; // Adjusted filter values
         offScreenCtx.drawImage(offScreenCanvas, 0, 0, offScreenCanvas.width, offScreenCanvas.height);
 
         // Add text watermark to the canvas
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Apply filter to live video feed
     function applyFilter() {
-        video.style.filter = 'sepia(1) saturate(50) hue-rotate(-10deg) brightness(0.9) contrast(1.5)'; // Adjusted filter values
+        video.style.filter = 'sepia(1) saturate(50) hue-rotate(-10deg) brightness(1) contrast(2)'; // Adjusted filter values
     }
 
     // Call applyFilter function on video play
